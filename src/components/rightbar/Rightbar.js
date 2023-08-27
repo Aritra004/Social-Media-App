@@ -1,4 +1,6 @@
 import "./rightbar.css";
+import { Users } from "../../dummyData";
+import Online from "../online/Online";
 
 const Rightbar = () => {
   return (
@@ -21,105 +23,9 @@ const Rightbar = () => {
         />
         <span className="rightbarTitle">Online Friends</span>
         <ul className="rightbarFriendList">
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://i.pinimg.com/736x/ff/46/3b/ff463bf838d3f730f4b373f5d689d4c5.jpg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Gamora</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://th.bing.com/th/id/OIP.bPBxcEUX3HgfhZfMm3p3gwHaNK?pid=ImgDet&rs=1"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Peter Quill</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://th.bing.com/th/id/OIP.9iA-3gUisRbGvceoWAAtMwHaEK?pid=ImgDet&rs=1"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Rocket</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://th.bing.com/th/id/OIP.NNihwg8LEbTFLB2Cb-T7ewHaLy?pid=ImgDet&rs=1"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Drax</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://th.bing.com/th/id/OIP.VthW7vjSCupeEFUrBBXzTgHaIp?pid=ImgDet&rs=1"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Groot</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://wallpapercave.com/wp/wp4298101.png"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Mantis</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://th.bing.com/th/id/OIP.21fV1zJvJ9zgeaZXvNhtdAHaKc?pid=ImgDet&rs=1"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Nebula</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://th.bing.com/th/id/OIP.iD-DLh5NRStUnPKSUq1IIQHaFf?pid=ImgDet&rs=1"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Batman</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarImgContainer">
-              <img
-                src="https://th.bing.com/th/id/OIP.kzbKw73w0RjfkLwawr8GqAHaHO?pid=ImgDet&rs=1"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Superman</span>
-          </li>
+          {Users.map((u) => (
+            <Online key={u.id} user={u} />
+          ))}
         </ul>
       </div>
     </div>
